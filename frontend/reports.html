@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Reports</title>
+
+    <link rel="stylesheet" href="css/report.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h2>🏥 Smart Hospital</h2>
+
+        <ul>
+            <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="patients.html"><i class="fa-solid fa-user-injured"></i> Patients</a></li>
+            <li><a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li>
+            <li><a href="appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a></li>
+            <li><a href="billing.html"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a></li>
+            <li><a href="pharmacy.html"><i class="fa-solid fa-capsules"></i> Pharmacy</a></li>
+            <li><a href="reports.html" class="active"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <h1>Hospital Reports</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Patients</h3>
+                <h2 id="reportPatients">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Doctors</h3>
+                <h2 id="reportDoctors">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Appointments</h3>
+                <h2 id="reportAppointments">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Bills</h3>
+                <h2 id="reportBills">0</h2>
+            </div>
+
+            <div class="card">
+    <h3>Total Revenue</h3>
+    <h2 id="reportRevenue">₹0</h2>
+</div>
+
+<div class="card">
+    <h2>Total Medicines</h2>
+    <h2 id="totalMedicines">0</h2>
+</div>
+
+        </div>
+
+        <button id="printReportBtn">
+            <i class="fa-solid fa-print"></i>
+            Print Report
+        </button>
+
+    </main>
+
+</div>
+<script>
+
+const user=JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+
+window.location="login.html";
+
+}
+
+if(user.role!="Admin"){
+
+alert("Access Denied");
+
+window.location="login.html";
+
+}
+
+</script>
+<script src="js/report.js"></script>
+<script src="js/role.js"></script>
+<footer>
+    <p>© 2026 Smart Hospital Management System | Developed by Nandini</p>
+</footer>
+</body>
+</html>

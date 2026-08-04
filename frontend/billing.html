@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Management</title>
+
+    <link rel="stylesheet" href="css/billing.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h2>🏥 Smart Hospital</h2>
+
+        <ul>
+             <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="patient.html"><i class="fa-solid fa-user-injured"></i> Patients</a></li>
+            <li><a href="doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li>
+            <li><a href="appointment.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a></li>
+            <li><a href="billing.html" class="active"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a></li>
+            <li><a href="pharmacy.html"><i class="fa-solid fa-capsules"></i> Pharmacy</a></li>
+            <li><a href="reports.html"> <i class="fa-solid fa-chart-column"></i>Reports</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+           
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Billing Management</h1>
+
+        </header>
+
+        <div class="top-bar">
+
+            <input
+                type="text"
+                id="searchBill"
+                placeholder="Search Bill">
+
+            <button id="addBillBtn">
+
+                Generate Bill
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Patient</th>
+
+                    <th>Total</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="billTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+<!-- Bill Modal -->
+
+<div class="modal" id="billModal">
+
+    <div class="modal-content">
+
+        <h2>Generate Bill</h2>
+
+        <form id="billForm">
+
+            <select id="patient_id" required>
+                <option value="">Select Patient</option>
+            </select>
+
+            <select id="appointment_id" required>
+                <option value="">Select Appointment</option>
+            </select>
+
+            <input type="number" id="consultation_fee"
+                placeholder="Consultation Fee" required>
+
+            <input type="number" id="medicine_fee"
+                placeholder="Medicine Fee" value="0">
+
+            <input type="number" id="test_fee"
+                placeholder="Test Fee" value="0">
+
+            <input type="number" id="total_amount"
+                placeholder="Total Amount" readonly>
+
+            <select id="payment_status">
+
+                <option value="Pending">Pending</option>
+
+                <option value="Paid">Paid</option>
+
+            </select>
+
+            <div class="buttons">
+
+                <button type="submit">Save</button>
+
+                <button type="button" id="closeBillModal">
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+</div>
+<script>
+
+const user=JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+
+window.location="login.html";
+
+}
+
+</script>
+<script src="js/billing.js"></script>
+<script src="js/role.js"></script>
+<footer>
+    <p>© 2026 Smart Hospital Management System | Developed by Nandini</p>
+</footer>
+</body>
+</html>

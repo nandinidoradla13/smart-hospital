@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Hospital Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <h1>🏥 Smart Hospital</h1>
+
+        <p>Hospital Management System</p>
+
+        <!-- LOGIN FORM -->
+        <div id="loginSection">
+
+           <form id="loginForm">
+
+    <input type="email" id="loginEmail" placeholder="Enter Email" required>
+
+    <input type="password" id="loginPassword" placeholder="Enter Password" required>
+
+    <button type="submit">Login</button>
+
+</form>
+
+            <p style="text-align:center;margin-top:15px;">
+                Don't have an account?
+                <a href="#" id="showRegister">Create Account</a>
+            </p>
+
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="registerSection" style="display:none;">
+
+            <form id="registerForm">
+
+    <input type="text" id="username" placeholder="Username" required>
+
+    <input type="email" id="registerEmail" placeholder="Enter Email" required>
+
+    <input type="password" id="registerPassword" placeholder="Enter Password" required>
+
+    <select id="role">
+        <option value="Admin">Admin</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Receptionist">Receptionist</option>
+    </select>
+
+    <button type="submit">Register</button>
+
+</form>
+
+            <p style="text-align:center;margin-top:15px;">
+                Already have an account?
+                <a href="#" id="showLogin">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+<footer>
+    <p>© 2026 Smart Hospital Management System | Developed by Nandini</p>
+</footer>
+
+</body>
+</html>

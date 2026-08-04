@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reception Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<h2>🏥 Reception</h2>
+
+<ul>
+
+<li><a href="reception-dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a></li>
+
+<li><a href="patients.html">
+<i class="fa-solid fa-user"></i>
+Patients
+</a></li>
+
+<li><a href="appointments.html">
+<i class="fa-solid fa-calendar"></i>
+Appointments
+</a></li>
+
+<li><a href="billing.html">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+Billing
+</a></li>
+
+<li><a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<h1 id="receptionName"></h1>
+
+<section class="cards">
+
+<div class="card">
+<h2>Total Patients</h2>
+<p id="totalPatients">0</p>
+</div>
+
+<div class="card">
+<h2>Appointments</h2>
+<p id="totalAppointments">0</p>
+</div>
+
+<div class="card">
+<h2>Total Bills</h2>
+<p id="totalBills">0</p>
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="js/reception-dashboard.js"></script>
+
+</body>
+</html>

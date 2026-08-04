@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Hospital Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>🏥 Smart Hospital</h2>
+
+        <ul>
+    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+    <li><a href="patients.html"><i class="fa-solid fa-user-injured"></i> Patients</a></li>
+
+    <li class="menu-doctors">
+        <a href="doctors.html">
+            <i class="fa-solid fa-user-doctor"></i> Doctors
+        </a>
+    </li>
+
+    <li><a href="appointments.html"><i class="fa-solid fa-calendar-days"></i> Appointments</a></li>
+
+    <li class="menu-billing">
+        <a href="billing.html">
+            <i class="fa-solid fa-file-invoice-dollar"></i> Billing
+        </a>
+    </li>
+
+    <li class="menu-pharmacy">
+        <a href="pharmacy.html">
+            <i class="fa-solid fa-capsules"></i> Pharmacy
+        </a>
+    </li>
+
+    <li class="menu-reports">
+        <a href="reports.html">
+            <i class="fa-solid fa-chart-column"></i> Reports
+        </a>
+    </li>
+
+    <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+</ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Dashboard</h1>
+
+        </header>
+
+        <section class="cards">
+
+    <div class="card">
+        <h2>Total Patients</h2>
+        <p id="totalPatients">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Doctors</h2>
+        <p id="totalDoctors">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Appointments</h2>
+        <p id="totalAppointments">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Bills</h2>
+        <p id="totalBills">0</p>
+    </div>
+
+    <div class="card">
+    <h2>Total Medicines</h2>
+    <p id="totalMedicines">0</p>
+</div>
+
+    <div class="recent-card">
+    <h2>Recent Patients</h2>
+    <table id="recentPatientsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Disease</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div class="recent-card">
+    <h2>Today's Appointments</h2>
+    <table id="recentAppointmentsTable">
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div id="dateTime"></div>
+
+</section>
+
+<div class="chart-container">
+    <canvas id="hospitalChart"></canvas>
+</div>
+
+    </main>
+
+</div>
+<script>
+
+const user=JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+
+window.location="login.html";
+
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/role.js"></script>
+<footer>
+    <p>© 2026 Smart Hospital Management System | Developed by Nandini</p>
+</footer>
+</body>
+
+</html>
