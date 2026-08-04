@@ -10,8 +10,12 @@ exports.register = (req, res) => {
         [email],
         (err, result) => {
 
-            if (err) return res.status(500).json(err);
-
+           if (err) {
+    console.log(err);
+    return res.status(500).json({
+        message: err.message
+    });
+}
             if (result.length > 0) {
                 return res.status(400).json({
                     message: "Email already exists"
@@ -23,8 +27,12 @@ exports.register = (req, res) => {
                 [username, email, password, role],
                 (err) => {
 
-                    if (err) return res.status(500).json(err);
-
+                    if (err) {
+    console.log(err);
+    return res.status(500).json({
+        message: err.message
+    });
+}
                     res.json({
                         message: "Registration Successful"
                     });
