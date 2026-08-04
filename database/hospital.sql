@@ -1,7 +1,13 @@
-CREATE DATABASE IF NOT EXISTS smart_hospital;
+--CREATE DATABASE IF NOT EXISTS smart_hospital;
 
-USE smart_hospital;
+--USE smart_hospital;
 
+DROP TABLE IF EXISTS bills;
+DROP TABLE IF EXISTS appointments;
+DROP TABLE IF EXISTS pharmacy;
+DROP TABLE IF EXISTS doctors;
+DROP TABLE IF EXISTS patients;
+DROP TABLE IF EXISTS users;
 -- ===========================
 -- USERS
 -- ===========================
