@@ -50,7 +50,7 @@ document.getElementById("registerForm")
     try {
 
         const response = await fetch(
-           "https://smart-hospital-backend-r2mu.onrender.com/api/auth/login",
+           "https://smart-hospital-backend-r2mu.onrender.com/api/auth/register",
             {
 
                 method: "POST",
