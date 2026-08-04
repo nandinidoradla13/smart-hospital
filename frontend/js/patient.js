@@ -3,7 +3,7 @@ let allPatients = [];
 async function loadPatients() {
     try {
 
-        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/patients");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/patients");
 
         const patients = await response.json();
         allPatients = patients;
@@ -92,8 +92,8 @@ patientForm.addEventListener("submit", async (e) => {
     try {
 
         const url = editPatientId 
-           ?`https://smart-hospital-s6ag.onrender.com/api/patients/${editPatientId}`
-           : "https://smart-hospital-s6ag.onrender.com/api/patients";
+           ?`https://smart-hospital-backend-r2mu.onrender.com/api/patients/${editPatientId}`
+           : "https://smart-hospital-backend-r2mu.onrender.com/api/patients";
 
        const method = editPatientId ? "PUT" : "POST";
 
@@ -138,7 +138,7 @@ async function deletePatient(id) {
 
     try {
 
-        const response = await fetch(`https://smart-hospital-s6ag.onrender.com/api/patients/${id}`, {
+        const response = await fetch(`https://smart-hospital-backend-r2mu.onrender.com/api/patients/${id}`, {
 
             method: "DELETE"
 
@@ -164,7 +164,7 @@ async function editPatient(id) {
 
     editPatientId = id;
 
-   const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/patients");
+   const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/patients");
     const patients = await response.json();
 
     const patient = patients.find(p => p.id == id);

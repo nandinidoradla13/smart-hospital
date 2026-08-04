@@ -6,7 +6,7 @@ async function loadReports() {
 
     try {
 
-        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/dashboard");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/dashboard");
 
         const data = await response.json();
 

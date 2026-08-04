@@ -5,7 +5,7 @@ async function loadDoctors() {
 
     try {
 
-        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/doctors");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/doctors");
 
         const doctors = await response.json();
           allDoctors = doctors;
@@ -104,8 +104,8 @@ doctorForm.addEventListener("submit", async (e) => {
     try {
 
         const url = editDoctorId
-          ? `https://smart-hospital-s6ag.onrender.com/api/doctors/${editDoctorId}`
-        :"https://smart-hospital-s6ag.onrender.com/api/doctors";
+          ? `https://smart-hospital-backend-r2mu.onrender.com/api/doctors/${editDoctorId}`
+        :"https://smart-hospital-backend-r2mu.onrender.com/api/doctors";
 
        const method = editDoctorId ? "PUT" : "POST";
 
@@ -148,7 +148,7 @@ async function deleteDoctor(id) {
 
     try {
 
-        const response = await fetch(`https://smart-hospital-s6ag.onrender.com/api/doctors/${id}`, {
+        const response = await fetch(`https://smart-hospital-backend-r2mu.onrender.com/api/doctors/${id}`, {
 
             method: "DELETE"
 

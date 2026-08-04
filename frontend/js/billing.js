@@ -6,7 +6,7 @@ async function loadBills() {
 
     try {
 
-        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/bills");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/bills");
 
         const bills = await response.json();
 
@@ -104,7 +104,7 @@ window.onclick = (e) => {
 // Load Patients
 async function loadPatients() {
 
-    const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/patients");
+    const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/patients");
 
     const patients = await response.json();
 
@@ -127,7 +127,7 @@ async function loadPatients() {
 // Load Appointments
 async function loadAppointments() {
 
-    const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/appointments");
+    const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/appointments");
 
     const appointments = await response.json();
 
@@ -196,8 +196,8 @@ billForm.addEventListener("submit", async (e) => {
     try {
 
         const url = editBillId
-            ? `https://smart-hospital-s6ag.onrender.com/api/bills/${editBillId}`
-            : "https://smart-hospital-s6ag.onrender.com/api/bills";
+            ? `https://smart-hospital-backend-r2mu.onrender.com/api/bills/${editBillId}`
+            : "https://smart-hospital-backend-r2mu.onrender.com/api/bills";
 
         const method = editBillId ? "PUT" : "POST";
 
@@ -268,7 +268,7 @@ async function deleteBill(id) {
     try {
 
         const response = await fetch(
-            `https://smart-hospital-s6ag.onrender.com/api/bills/${id}`,
+            `https://smart-hospital-backend-r2mu.onrender.com/api/bills/${id}`,
             {
                 method: "DELETE"
             }
@@ -294,7 +294,7 @@ async function deleteBill(id) {
 function printBill(id) {
 
     window.open(
-        `https://smart-hospital-s6ag.onrender.com/api/bills/print/${id}`,
+        `https://smart-hospital-backend-r2mu.onrender.com/api/bills/print/${id}`,
         "_blank"
     );
 

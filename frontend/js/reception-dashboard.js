@@ -30,7 +30,7 @@ async function loadDashboard() {
     try {
 
         const response = await fetch(
-            "https://smart-hospital-s6ag.onrender.com/api/dashboard"
+            "https://smart-hospital-backend-r2mu.onrender.com/api/dashboard"
         );
 
         const data = await response.json();
@@ -66,7 +66,7 @@ async function loadRecentPatients() {
     try {
 
         const response = await fetch(
-            "https://smart-hospital-s6ag.onrender.com/api/patients"
+            "https://smart-hospital-backend-r2mu.onrender.com/api/patients"
         );
 
         const patients = await response.json();

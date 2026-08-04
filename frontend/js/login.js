@@ -50,7 +50,7 @@ document.getElementById("registerForm")
     try {
 
         const response = await fetch(
-           "https://smart-hospital-s6ag.onrender.com/api/auth/login",
+           "https://smart-hospital-backend-r2mu.onrender.com/api/auth/login",
             {
 
                 method: "POST",
@@ -110,7 +110,7 @@ document.getElementById("loginForm")
     try {
 
         const response = await fetch(
-            "https://smart-hospital-s6ag.onrender.com/api/auth/login",
+            "https://smart-hospital-backend-r2mu.onrender.com/api/auth/login",
             {
                 method: "POST",
 

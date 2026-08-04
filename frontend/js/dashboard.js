@@ -24,7 +24,7 @@ async function loadDashboard() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/dashboard");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/dashboard");
 
         const data = await response.json();
 
@@ -68,7 +68,7 @@ async function loadRecentPatients() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/patients");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/patients");
 
         const patients = await response.json();
 
@@ -113,7 +113,7 @@ async function loadRecentAppointments() {
 
     try {
 
-        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/appointments");
+        const response = await fetch("https://smart-hospital-backend-r2mu.onrender.com/api/appointments");
 
         const appointments = await response.json();
 
@@ -159,7 +159,7 @@ const ctx = document.getElementById("hospitalChart");
 
 if (ctx) {
 
-    fetch("https://smart-hospital-s6ag.onrender.com/api/dashboard")
+    fetch("https://smart-hospital-backend-r2mu.onrender.com/api/dashboard")
 
         .then(res => res.json())
 
