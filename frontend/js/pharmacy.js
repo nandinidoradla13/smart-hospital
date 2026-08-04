@@ -6,7 +6,7 @@ async function loadMedicines() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/pharmacy");
+        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/pharmacy");
 
         const medicines = await response.json();
 
@@ -117,8 +117,8 @@ medicineForm.addEventListener("submit", async (e) => {
     try {
 
         const url = editMedicineId
-            ? `http://localhost:5000/api/pharmacy/${editMedicineId}`
-            : "http://localhost:5000/api/pharmacy";
+            ? `https://smart-hospital-s6ag.onrender.com/api/pharmacy/${editMedicineId}`
+            : "https://smart-hospital-s6ag.onrender.com/api/pharmacy";
 
         const method = editMedicineId ? "PUT" : "POST";
 
@@ -186,7 +186,7 @@ async function deleteMedicine(id) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/pharmacy/${id}`,
+            `https://smart-hospital-s6ag.onrender.com/api/pharmacy/${id}`,
             {
                 method: "DELETE"
             }

@@ -113,7 +113,7 @@ async function loadRecentAppointments() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/appointments");
+        const response = await fetch("https://smart-hospital-s6ag.onrender.com/api/appointments");
 
         const appointments = await response.json();
 
@@ -159,7 +159,7 @@ const ctx = document.getElementById("hospitalChart");
 
 if (ctx) {
 
-    fetch("http://localhost:5000/api/dashboard")
+    fetch("https://smart-hospital-s6ag.onrender.com/api/dashboard")
 
         .then(res => res.json())
 

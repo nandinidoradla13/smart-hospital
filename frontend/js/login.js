@@ -50,7 +50,7 @@ document.getElementById("registerForm")
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/register",
+            "https://smart-hospital-s6ag.onrender.com",
             {
 
                 method: "POST",
@@ -109,7 +109,7 @@ document.getElementById("loginForm")
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/login",
+            "https://smart-hospital-s6ag.onrender.com",
             {
 
                 method: "POST",
