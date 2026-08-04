@@ -50,7 +50,7 @@ document.getElementById("registerForm")
     try {
 
         const response = await fetch(
-            "https://smart-hospital-s6ag.onrender.com",
+           "https://smart-hospital-s6ag.onrender.com/api/auth/login",
             {
 
                 method: "POST",
@@ -106,12 +106,12 @@ document.getElementById("loginForm")
     const password =
         document.getElementById("loginPassword").value;
 
+
     try {
 
         const response = await fetch(
-            "https://smart-hospital-s6ag.onrender.com",
+            "https://smart-hospital-s6ag.onrender.com/api/auth/login",
             {
-
                 method: "POST",
 
                 headers: {
@@ -119,17 +119,15 @@ document.getElementById("loginForm")
                 },
 
                 body: JSON.stringify({
-
                     email,
-
                     password
-
                 })
-
             }
         );
 
+
         const data = await response.json();
+
 
         if (!response.ok) {
 
@@ -139,15 +137,15 @@ document.getElementById("loginForm")
 
         }
 
-        // Save User
+
         localStorage.setItem(
             "user",
             JSON.stringify(data.user)
         );
 
+
         alert("Login Successful");
 
-        // Role Redirect
 
         if (data.user.role === "Admin") {
 
@@ -167,6 +165,7 @@ document.getElementById("loginForm")
                 "reception-dashboard.html";
 
         }
+
 
     }
 
